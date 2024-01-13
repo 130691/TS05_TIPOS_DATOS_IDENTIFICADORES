@@ -1,0 +1,28 @@
+# Este programa solicita al usuario que introduzca el radio de un círculo y luego calcula e imprime el área de ese círculo.
+# Utiliza los tipos de datos float para el radio y el área, y str para la entrada del usuario.
+# También sigue la convención snake_case para los nombres de las variables y la función.
+
+
+# Programa para calcular el área de un círculo
+
+import math  # Importamos el módulo math para usar pi
+
+def calcular_area_circulo(radio: float) -> float:
+    """
+    Esta función calcula el área de un círculo dado su radio.
+    :param radio: El radio del círculo
+    :return: El área del círculo
+    """
+    return math.pi * radio ** 2
+
+# Solicitamos al usuario que introduzca el radio del círculo
+radio_str = input("Introduce el radio del círculo: ")
+
+# Convertimos el radio a float
+radio = float(radio_str)
+
+# Calculamos el área del círculo
+area = calcular_area_circulo(radio)
+
+# Imprimimos el resultado
+print(f"El área del círculo con radio {radio} es {area}")
